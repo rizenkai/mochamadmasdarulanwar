@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Izin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex">
+      <div id="sidebar-container" class="w-64 h-screen"></div>
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <div class="bg-blue-600 text-white p-4 rounded shadow-md mb-6">
+          <h1 class="text-2xl font-bold">
+            Sistem Informasi Manajemen Karyawan
+          </h1>
+          <p class="text-lg">Izin</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow-md">
+          <h2 class="text-xl font-bold mb-4">Daftar Izin</h2>
+          <table class="min-w-full bg-white">
+            <thead>
+              <tr>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  No
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  Nama
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  Tanggal Izin
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  Alasan
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  Status
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700"
+                >
+                  Aksi
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-4 border-b border-gray-200">1</td>
+                <td class="py-2 px-4 border-b border-gray-200">Dimas Trio Saputra</td>
+                <td class="py-2 px-4 border-b border-gray-200">10 May 2023</td>
+                <td class="py-2 px-4 border-b border-gray-200">Sakit</td>
+                <td class="py-2 px-4 border-b border-gray-200">Menunggu</td>
+                <td class="py-2 px-4 border-b border-gray-200">
+                  <button class="bg-blue-500 text-white px-2 py-1 rounded">
+                    Konfirmasi
+                  </button>
+                  <button class="bg-red-500 text-white px-2 py-1 rounded">
+                    Tolak
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b border-gray-200">2</td>
+                <td class="py-2 px-4 border-b border-gray-200">Fachrio Raditya</td>
+                <td class="py-2 px-4 border-b border-gray-200">9 May 2023</td>
+                <td class="py-2 px-4 border-b border-gray-200">
+                  Urusan Keluarga
+                </td>
+                <td class="py-2 px-4 border-b border-gray-200">Disetujui</td>
+                <td class="py-2 px-4 border-b border-gray-200">
+                  <button class="bg-blue-500 text-white px-2 py-1 rounded">
+                    Edit
+                  </button>
+                  <button class="bg-red-500 text-white px-2 py-1 rounded">
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <!-- Tambahkan baris izin lainnya sesuai kebutuhan -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+        fetch("sidebar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("sidebar-container").innerHTML = data;
+          });
+      </script>
+  </body>
+</html>

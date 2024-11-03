@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex">
+      <div id="sidebar-container" class="w-64 h-screen"></div>
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <div class="bg-blue-600 text-white p-4 rounded shadow-md mb-6">
+          <h1 class="text-2xl font-bold">
+            Sistem Informasi Manajemen Karyawan
+          </h1>
+          <p class="text-lg">Admin Dashboard</p>
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-users fa-2x text-blue-600 mr-2"> </i>
+              <div>
+                <p class="font-semibold">Data Pegawai</p>
+                <p class="text-2xl font-bold">2</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-calendar-check fa-2x text-green-600 mr-2"> </i>
+              <div>
+                <p class="font-semibold">Absensi Hari Ini</p>
+                <p class="text-sm text-gray-600">11 May 2023</p>
+                <p class="text-2xl font-bold">0</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-envelope-open-text fa-2x text-blue-600 mr-2">
+              </i>
+              <div>
+                <p class="font-semibold">Izin Menunggu Konfirmasi</p>
+                <p class="text-2xl font-bold">2</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-clock fa-2x text-purple-600 mr-2"> </i>
+              <div>
+                <p class="font-semibold">Lembur Menunggu Konfirmasi</p>
+                <p class="text-2xl font-bold">1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      fetch("sidebar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sidebar-container").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
